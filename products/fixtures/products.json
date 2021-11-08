@@ -1,0 +1,115 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "sku": "001",
+      "name": "Ficus Elastica",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": "http://cdn.home-designing.com/wp-content/uploads/2017/01/buy-indoor-plants-Ficus-elastica-600x900.jpg",
+      "image": "buy-indoor-plants-Ficus-elastica-600x900.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "sku": "002",
+      "name": "Maranta Leuconeura",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": "http://cdn.home-designing.com/wp-content/uploads/2017/01/colorful-house-plant-Maranta-leuconeura-600x900.jpg",
+      "image": "colorful-house-plant-Maranta-leuconeura-600x900.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "sku": "003",
+      "name": "Epipremnum Aurum",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": "http://cdn.home-designing.com/wp-content/uploads/2017/01/indoor-plant-with-vines-Epipremnum-aureum-600x600.jpg",
+      "image": "indoor-plant-with-vines-Epipremnum-aureum-600x600.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "sku": "004",
+      "name": "Xerosicyos Danguyi",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": "http://cdn.home-designing.com/wp-content/uploads/2017/01/indoor-plants-Xerosicyos-danguyi-600x600.jpg",
+      "image": "indoor-plants-Xerosicyos-danguyi-600x600.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "sku": "005",
+      "name": "Dracaena Marginata",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": "http://cdn.home-designing.com/wp-content/uploads/2017/01/large-indoor-plant-Dracaena-marginata-600x901.jpg",
+      "image": "large-indoor-plant-Dracaena-marginata-600x901.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "sku": "006",
+      "name": "Fern Nephrolepis cordifolia",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": null,
+      "image": "low-maintenance-fern-Nephrolepis-cordifolia-600x672.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "sku": "007",
+      "name": "Senecio Rowleyanus",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": null,
+      "image": "Senecio-rowleyanus-hanging-house-plant-600x800.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "sku": "008",
+      "name": "Monstera Deliciosa",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+      "price": "35.00",
+      "pot_size": "15.00",
+      "height": "45.00",
+      "image_url": null,
+      "image": "tropical-plants-Monstera-deliciosa-600x600.jpg"
+    }
+  }
+]
+
