@@ -36,11 +36,11 @@
 </head>
 
 <body>
-  <header class="fixed-top">
+  <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-light pb-0">
       <div class="container-fluid">
         <!-- toggle button -->
-      <a class="navbar-brand" href="{% url 'home' %">Plantastic</a>
+        <a class="navbar-brand" href="{% url 'home' %">Plantastic</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -90,11 +90,11 @@
             </ul>
           </div>
     </nav>
-    <div id="delivery-banner" class="row text-center">
+    <div id="delivery-banner" class="col-12 text-center">
       <div class="col bg-black text-white">
         <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
       </div>
-    </div>
+    </div>    
   </header>
 
   {% if messages %}
