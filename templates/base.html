@@ -63,7 +63,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
-                      <li><a class=" dropdown-item" href="">Plant Management</a></li>
+                      <li><a class=" dropdown-item" href="{% url 'add_product' %}">Plant Management</a></li>
                     {% endif %}
                       <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
                       <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
