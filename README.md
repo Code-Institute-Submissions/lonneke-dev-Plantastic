@@ -8,6 +8,8 @@ Plantastic is an online store that allows the users to purchase specific plants 
 
 This project is my fourth assignment of the Full stack development course I am following at CodeInstitute.
 
+Practically all the code has been used fro code-institute's mini-project boutique ado.
+
 [View the live project here.](https://plantastic.herokuapp.com/)
 
 ---
