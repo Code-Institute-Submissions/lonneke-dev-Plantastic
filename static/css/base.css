@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/pexels-cátia-matos-1072179.jpg') no-repeat center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 140px);
     color: rgb(255, 255, 255);
     font-family: 'Preahvihear';
 }
@@ -41,12 +41,12 @@ body {
       }
   
     .top {
-        padding-top: 80px;
+        padding-top: 140px;
       }
 }
 
 @media (max-width: 992px) {
     .top {
-        padding-top: 40px;
+        padding-top: 80px;
     }
 }

@@ -28,7 +28,7 @@
         <header>
             <!-- Bootstrap Collapsing Navbar -->
             <!-- Note - change class navbar-expand to navbar-expand-sm to collapse menu on small devices if required -->
-            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand px-3 logo-font" href="{% url 'home' %}">plantastic</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -60,9 +60,9 @@
                                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarUserMenu">
                                     {% if request.user.is_authenticated %}
                                         {% if request.user.is_superuser %}
-                                        <a href="" class="dropdown-item">Product Management</a>
+                                        <a href="" class="dropdown-item">Plant Management</a>
                                         {% endif %}
-                                        <li><a class="dropdown-item" href="">Profile</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
                                         <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>   
                                     {% else %}
                                         <li><a class="dropdown-item" href="{% url 'account_login' %}?next={{request.path}}">Sign In</a></li>
