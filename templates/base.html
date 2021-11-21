@@ -1,117 +1,110 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
+    <head>
+    {% include 'includes/meta.html' %}
 
-<head>
+    {% block extra_meta %}
+    {% endblock %}
 
-  {% block meta %}
-  <meta http-equiv="X-UA-Compatible" content="ie-edge">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  {% endblock %}
+    {% block corecss %}
+        {% include 'includes/externalcss.html' %}
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    {% endblock %}
 
-  {% block extra_meta %}
-  {% endblock %}
+    {% block extra_css %}
+    {% endblock %}
 
-  {% block corecss %}
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
-  <link href="{% static 'css/base.css' %}" rel="stylesheet">
-  {% endblock %}
+    {% block corejs %}
+        <script src="https://kit.fontawesome.com/d4489e94b7.js" crossorigin="anonymous"></script>
+    {% endblock %}
 
-  {% block extra_css %}
-  {% endblock %}
+    {% block extra_js %}
+    {% endblock %}
 
-  {% block corejs %}
-  <script src="https://kit.fontawesome.com/d4489e94b7.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <!-- Stripe -->
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  {% endblock %}
-
-  {% block extra_js %}
-  {% endblock %}
-
-  <title>Plantastic {% block extra_title %}{% endblock %}</title>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light pb-0">
-      <div class="container-fluid">
-        <!-- toggle button -->
-        <a class="navbar-brand logo-font" href="{% url 'home' %}">Plantastic</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto align-middle">
-              <li>
-                <form method="GET" action="{% url 'products' %}"  class="d-flex p-1">
-                  <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-                  <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-                </form>
-              </li>
-              <li class="nav-item dropdown">
-                <div class="text-center">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-user-circle fa-lg"></i>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                      <li><a class=" dropdown-item" href="{% url 'add_product' %}">Plant Management</a></li>
-                    {% endif %}
-                      <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
-                      <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
-                    {% else %}
-                      <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
-                      <li><a class="dropdown-item" href="{% url 'account_login' %}">Sign In</a></li>
-                    {% endif %}
-                </ul>
-              </div>
-              </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="{% url 'view_basket' %}">
-                    <div class="text-center">
-                      <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                      <p>
-                          {% if grand_total %}
-                              €{{ grand_total|floatformat:2 }}
-                          {% else %}
-                              €0.00
-                          {% endif %}
-                      </p>
-                    </div>
-                  </a>
-                </li>
+        <title>Plantastic {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <!-- Bootstrap Collapsing Navbar -->
+            <!-- Note - change class navbar-expand to navbar-expand-sm to collapse menu on small devices if required -->
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand px-3 logo-font" href="{% url 'home' %}">plantastic</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav ms-auto px-3 p-1">
+                            {% if categories_all|length > 1 %}
+                                {% for category in categories_all %}
+                                <li class="nav-item p-1">
+                                    <a href="{% url 'products' %}?category={{ category.name }}" class="nav-link">{{ category.friendly_name }}</a>
+                                </li>
+                                {% endfor %}
+                            {% endif %}
+                            <li>
+                                <form method="GET" action=""  class="d-flex pt-3">
+                                    <input class="form-control" type="search" name="q" placeholder="Search" aria-label="Search Products">
+                                    <button class="btn btn-outline-dark me-4" type="submit" aria-label="Search Products"><i class="fas fa-search"></i></button>
+                                </form>
+                            </li>
+                            <li class="nav-item dropdown text-center me-2">
+                                <a href="#" class="nav-link" id="navbarUserMenu"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="User dropdown menu">
+                                    <i class="fas fa-lg fa-user"></i>
+                                    <p class="mb-0">account</p>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarUserMenu">
+                                    {% if request.user.is_authenticated %}
+                                        {% if request.user.is_superuser %}
+                                            <li><a class="dropdown-item" href="">Add Product</a></li>
+                                        {% else %}
+                                        {% endif %}
+                                        <li><a class="dropdown-item" href="">Profile</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>   
+                                    {% else %}
+                                        <li><a class="dropdown-item" href="">Contact</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'account_login' %}?next={{request.path}}">Sign In</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown text-center">
+                                <a href="" class="nav-link" aria-label="View Bag">
+                                    <i class="fas fa-lg fa-shopping-basket"></i>
+                                    <p class="mb-0">
+                                        {% if grand_total %}
+                                            €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            €0.00
+                                        {% endif %}
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>                
                 </div>
-            </ul>
-          </div>
-    </nav>
-    <div id="delivery-banner" class="col-12 text-center">
-      <div class="col bg-black text-white">
-        <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
-      </div>
-    </div>    
-  </header>
+            </nav>
+        </header>
 
-  {% if messages %}
-  <div class="message-container"></div>
-  {% endif %}
+        <div class="top"></div>
 
-  {% block page_header %}
-  {% endblock %}
+        {% if messages %}
+        <div class="message-container"></div>
+        {% endif %}
 
-  {% block content %}
-  {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-  {% block postloadjs %}
-  {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-</body>
+        {% block postloadjs %}
+            {% include 'includes/externaljs.html' %} 
+        {% endblock %}
 
+    </body>
 </html>
