@@ -1,21 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
-    
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
 
 {% block content %}
-    <div class="container-sm d-flex justify-content-center">
+    <div class="container d-flex justify-content-center mt-5 outline-white">
         <div class="row">
-            <div class="col-12 vertical-center pb-5">
-                <h1 class="logo">Plantastic</h1>
-                <p>Find your new plant friend</p>
-                <a href="{% url 'products' %}" class="btn">Shop Plants</a>
+            <div class="col-12 text-center bg p-3">
+                <h1>Plantastic</h1>
+                <hr>
+                <h2>Find Your New Plant Friend Today!</h2>
+                <hr>
+                <a href="{% url 'products' %}" class="btn btn-outline-success">Shop Plants</a>
             </div>
         </div>
     </div>

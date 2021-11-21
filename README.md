@@ -8,8 +8,6 @@ Plantastic is an online store that allows the users to purchase specific plants 
 
 This project is my fourth assignment of the Full stack development course I am following at CodeInstitute.
 
-Practically all the code has been used fro code-institute's mini-project boutique ado.
-
 [View the live project here.](https://plantastic.herokuapp.com/)
 
 ---
@@ -67,41 +65,20 @@ Store Owner | Delete a product | Remove items not for sale
 ### 1.3 Design 
     
 - #### Colour Scheme
-The colours used for the website are various shades of teal provided by [Materialize](https://materializecss.com/color.html).
-
-![Colour scheme](static/images/teal.png)
-- **#e0f2f1 teal lighten-5** is used for the background of the whole website.
-- **#b2dfdb teal lighten-4** is used for the background of the card-panel on the profile page.
-- **#009688 teal** is used for the navbar and footer.
-- **#00695c teal darken-3** is used to announce the user on the profile page.
-- **#004d40 teal darken-4** is used for the flash messages text, the buttons and the page h3's.
 
 - #### Fonts
-The **Itim font** is used throughout the whole website for all text. sans serif is the fallback in case the main font isn't being imported to the site correctly. I used this font because it's easy to look at.
+The **Preahvihear font** is used throughout the whole website for all text. sans serif is the fallback in case the main font isn't being imported to the site correctly. I used this font because it's easy to look at.
 
 - #### Icons
 In this project the icons used are provided by [fontawesome](https://fontawesome.com/). The icons used have a practical and functional purpose for example the magnifying glass icon for the search box. They also give character to the website.
 
 - #### Images
-The images I used for this project came from several places: 
-- default image for place: [Pexels](https://www.pexels.com/) uploaded by: [Leah Kelley](https://www.pexels.com/nl-nl/@leah-kelley-50725). 
-- The hero image: [Pexels](https://www.pexels.com/) uploaded by: [Element5 digital](https://www.pexels.com/nl-nl/@element5).
-- Anne frank house: [amsterdam](http://www.amsterdam.nu/wp-content/uploads/2014/10/anne-frank.jpg)
-- Moomin cafe: [tripadvisor](https://media-cdn.tripadvisor.com/media/photo-s/13/74/f2/0a/photo0jpg.jpg)
-- Amsterdam Lookout: [architectenweb](https://architectenweb.nl/media/illustrations/2017/03/14db40d3-9444-4b6c-ad26-aafc7e7d763b_400.jpg)
+The images I used for this project came mostly from [Pexels](https://www.pexels.com/): 
+- The background image: [Pexels](https://www.pexels.com/) uploaded by: [Leah Kelley](https://www.pexels.com/nl-nl/@leah-kelley-50725). 
 
 - #### Defensive design 
 
-    - The user is not able to break the site by clicking on buttons. 
-    - The signup form: 
-        - The username has to be between 5-20 characters and must only contain letters and numbers. 
-        - The password has to be between 5-20 characters and must contain at least one number, and one uppercase and lowercase letter.
-    - The add and edit place form:
-     - The place name has to be between 3-30 characters and must only contain letters and numbers.
-     - The city has to be between 3-30 characters and must only contain letters.
-     - The country has to be between 3-30 characters and must only contain letters.
-        - The image URL must start with http:// or https://.
-    - A place can't be deleted by just one click. If someone clicks on the delete button, there wil be a pop up with a confirmation if someone is sure to delete the place.
+    
 
 - #### Interactive design 
 
@@ -111,13 +88,12 @@ The images I used for this project came from several places:
 <span id="ux-architecture"></span>
 
 ### 1.4 Information architecture
-The project has three collections in the database. The database structure in MongoDB is as follows:
-![Information architecture](static/images/database.jpg)
+
 
 <span id="ux-mockup"></span>
 
 ### 1.5 Mockup designs
-See all Wireframes [here](wireframes/ms3.pdf)
+See all Wireframes [here](wireframes/ms4.pdf)
 
 The wireframes were made with [Balsamiq](https://balsamiq.com/)
 
@@ -130,18 +106,17 @@ The wireframes were made with [Balsamiq](https://balsamiq.com/)
 #### 1. Design 
 - An attractive and simple layout with consistency.
 - Simple navigation throughout the website by using the navigation bar. 
-- Showing the places simple and clearly
+- Showing the products simple and clearly
 
 #### 2. General 
 - The home page shows an introduction in the shape of a header and introduction text. And the page shows a couple of new recipes. 
-- There are links to the social media platforms at the top and bottom of the website. 
+- There are links to the social media platforms at the bottom of the website. 
 - People can sign up for the newsletter. 
 
-#### 3. Places
-- Places can be created, read, updated and deleted (CRUD) by the users. 
-- People can search for places with the search bar. 
-- Users have access to their profile, with an overview of all their places. 
-- Places include the name, city, country, continent and a description/review.
+#### 3. Products
+- Products can be created, read, updated and deleted (CRUD) by the super-user. 
+- People can search for products with the search bar. 
+- Users have access to their profile, with an overview of all their orders.
 
 #### 4. Signup, signin and signout 
 - People can create a new account on the web application. 
@@ -152,10 +127,6 @@ The wireframes were made with [Balsamiq](https://balsamiq.com/)
 <span id="features-future"></span>
 
 ### 2.2 Features left to implement in the future 
-- Giving the users the option to upload an image from their own library which will be stored in cloudinary.
-- Allowing users to save certain places from other uses which will show up on their profile.
-- Add form validation on the backend.
-- Allowing users to edit and delete their profile.
 
 <span id="technologies"></span>
 
@@ -183,8 +154,6 @@ The wireframes were made with [Balsamiq](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
 - [Materialize](https://materializecss.com/)
     - Materialize is used for the design framework.
-- [MongoDB](https://www.mongodb.com/1)
-    - MongoDB is the fully managed cloud database service used for the project.
 - [Heroku](https://dashboard.heroku.com/)
     - Heroku is the cloud platform to deploying the app.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/)
@@ -220,7 +189,6 @@ The testing process can be found [here](TESTING.md).
 #### Requirements 
 - Python3 
 - Github account 
-- MongoDB account 
 - Heroku account
 
 #### Clone the project 
@@ -280,12 +248,12 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 
 #### Code
 - [Codeinstitute](https://codeinstitute.net/): For teaching me the basics and making it possible to do this project especially the task manager mini project was helpful to this project.
-- [BREAKTASTY](https://ms3-breaktasty.herokuapp.com/): A whole bunch of little snippets were used from this project to compare and add to my own code, also to help me put together the README file.
-- [Materialize](https://materializecss.com/): Most of the designing was done with materialize.
 
 <span id="Acknowledge"></span>
 
 <h1>7. Acknowledge</h1>
+
+A lot of thanks to the following:
 
 - The support and guidance of my mentor Precious Ijege. 
 - The lessons and knowledge of [Code Institute.](https://codeinstitute.net/)
@@ -298,4 +266,4 @@ This project is for educational purposes only. If there is an issue with the cop
 
 Thanks for visiting
 
-<a href="#placetogo">Back to top!</a>
+<a href="#plantastic">Back to top!</a>
