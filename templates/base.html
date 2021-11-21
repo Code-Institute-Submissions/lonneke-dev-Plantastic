@@ -46,7 +46,7 @@
                                 {% endfor %}
                             {% endif %}
                             <li>
-                                <form method="GET" action=""  class="d-flex pt-3">
+                                <form method="GET" action="{% url 'products' %}"  class="d-flex pt-3">
                                     <input class="form-control" type="search" name="q" placeholder="Search" aria-label="Search Products">
                                     <button class="btn btn-outline-dark me-4" type="submit" aria-label="Search Products"><i class="fas fa-search"></i></button>
                                 </form>
@@ -60,8 +60,7 @@
                                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarUserMenu">
                                     {% if request.user.is_authenticated %}
                                         {% if request.user.is_superuser %}
-                                            <li><a class="dropdown-item" href="">Add Product</a></li>
-                                        {% else %}
+                                        <a href="" class="dropdown-item">Product Management</a>
                                         {% endif %}
                                         <li><a class="dropdown-item" href="">Profile</a></li>
                                         <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>   
@@ -72,7 +71,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown text-center">
-                                <a href="" class="nav-link" aria-label="View Bag">
+                                <a href="{% url 'view_basket' %}" class="nav-link" aria-label="View Basket">
                                     <i class="fas fa-lg fa-shopping-basket"></i>
                                     <p class="mb-0">
                                         {% if grand_total %}
