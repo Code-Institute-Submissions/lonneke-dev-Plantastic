@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
-                <div class="table-responsive rounded bg">
+                <div class="table-responsive rounded bg pt-3">
                     <table class="table table-sm table-borderless">
                         <thead>
                             <tr>
@@ -125,25 +125,25 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+    <script type="text/javascript">
+        // Update quantity on click
+        $('.update-link').click(function(e) {
+            var form = $(this).prev('.update-form');
+            form.submit();
+        })
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/basket/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        // Remove item and reload on click
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var url = `/basket/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken};
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
-</script>
+            $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+        })
+    </script>
 
 {% endblock %}
