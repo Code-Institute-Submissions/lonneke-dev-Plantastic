@@ -152,7 +152,7 @@ The wireframes were made with [Balsamiq](https://balsamiq.com/)
     - Google Fonts is used to provide the font Itim for all the text that is used in the project. 
 - [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
-- [Materialize](https://materializecss.com/)
+- [Bootstrap](https://getbootstrap.com/)
     - Materialize is used for the design framework.
 - [Heroku](https://dashboard.heroku.com/)
     - Heroku is the cloud platform to deploying the app.
@@ -247,7 +247,7 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 <h1>6. Credits</h1>
 
 #### Code
-- [Codeinstitute](https://codeinstitute.net/): For teaching me the basics and making it possible to do this project especially the task manager mini project was helpful to this project.
+- [Codeinstitute](https://codeinstitute.net/): For teaching me the basics and making it possible to do this project especially the task manager mini project was helpful to this project. And for almost all of the code from for this project.
 
 <span id="Acknowledge"></span>
 
