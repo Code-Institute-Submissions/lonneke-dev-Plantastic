@@ -63,6 +63,57 @@ body {
     border-radius: 0;
 }
 
+/*-- Toast Messages --*/
+.toast {
+    border-bottom-left-radius: 1rem 1rem;
+    border-bottom-right-radius: 1rem 1rem;
+}
+
+.toast-container {
+    position: fixed;
+    top: 8rem;
+    right: 1.5rem;
+    z-index: 11;
+}
+
+.toast-header{
+    border: white 1px solid;
+    background-clip: unset;
+    border-bottom: None
+}
+
+.toast-body {
+    border: white 1px solid;
+    background-clip: unset;
+    border-bottom-left-radius: 1rem 1rem;
+    border-bottom-right-radius: 1rem 1rem;
+}
+
+.toast h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.toast-error i,
+.toast-error h5 {
+    color: red;
+}
+
+.toast-info i,
+.toast-info h5 {
+    color: blue;
+}
+
+.toast-success i,
+.toast-success h5 {
+    color: green;
+}
+
+.toast-warning i,
+.toast-warning h5 {
+    color: yellow;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
