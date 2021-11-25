@@ -1,1 +1,1 @@
-web: gunicorn plantastic.wsgi:application
+web: gunicorn plantastic-lon.wsgi:application
