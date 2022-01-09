@@ -5,9 +5,11 @@ html {
 body {
     background: url('/media/pexels-cátia-matos-1072179.jpg') no-repeat center fixed;
     background-size: cover;
-    height: calc(100vh - 140px);
+    min-height: 136vh;
     color: rgb(255, 255, 255);
     font-family: 'Preahvihear';
+    display: flex;
+    flex-direction: column;
 }
 
 .bg {
@@ -140,6 +142,7 @@ body {
     }
 
     .index {
-        padding-top: 150px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 }

@@ -116,6 +116,45 @@
         {% block content %}
         {% endblock %}
 
+        <footer class="footer mt-auto py-3 bg">
+            <div class="container-fluid px-5"> 
+                <div class="row justify-content-between">
+              <div class="col-12 col-md-6">
+                  <h5>Contact Info</h5>
+                  <ul class="nav flex-column">
+                    <li>Adres:</li>
+                    <li class="text-muted mb-2">Plantstreet 21, 2121 PT Plantville</li>
+                    <li>Phone:</li>
+                    <li class="text-muted mb-2">+31 6 12345678</li>
+                    <li>E-mail:</li>
+                    <li class="text-muted mb-2">info@plantastic.com</li>
+                    <li>working hours:</li>
+                    <li class="text-muted mb-2">monday - friday / 8:30 - 17:30</li>
+                  </ul>
+              </div>        
+              <div class="col-12 col-md-4">
+                <form>
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Monthly digest of whats new and exciting from us.</p>
+                  <div class="d-flex w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-success" type="button">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+              </div>
+              <div class="row justify-content-between mt-2 pt-2 border-top">
+                  <p class="mb-0 pt-2 col-12 col-md-5">© Plantastic 2022. All rights reserved.</p>
+                  <ul class="list-unstyled mb-0 d-flex col-12 col-md-2">
+                      <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-2x fa-github-square"></i></a></li>
+                      <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-2x fa-instagram-square"></i></a></li>
+                      <li class="ms-3"><a class="link-dark" href="#"><i class="fab fa-2x fa-facebook-square"></i></a></li>
+                  </ul>
+                </div>
+            </div>
+          </footer> 
+
         {% block postloadjs %}
             {% include 'includes/externaljs.html' %} 
             <script src="{% static 'js/base.js' %}"></script>
