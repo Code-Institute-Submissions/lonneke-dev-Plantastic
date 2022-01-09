@@ -15,6 +15,9 @@ def newsletter(request):
             form.save()
             messages.success(request, 'Subscription Successful')
             return redirect('/')
+        else:
+            messages.error(request, 'Something went wrong please try again')
+            return redirect('/')
     else:
         form = SubsciberForm()
     context = {
@@ -42,7 +45,7 @@ def mail_letter(request):
                 fail_silently=False,
             )
             messages.success(request, 'Message has been sent to the Mail List')
-            return redirect('mail-letter')
+            return redirect('mail_letter')
     else:
         form = MailMessageForm()
     context = {
