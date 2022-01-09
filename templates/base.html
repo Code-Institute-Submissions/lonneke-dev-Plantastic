@@ -63,7 +63,7 @@
                                     {% if request.user.is_authenticated %}
                                         {% if request.user.is_superuser %}
                                         <li><a class="dropdown-item" href="{% url 'add_product' %}">Add Plant</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'newsletter' %}">Newsletter</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'mail_letter' %}">Newsletter</a></li>
                                         {% endif %}
                                         <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
                                         <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>   
