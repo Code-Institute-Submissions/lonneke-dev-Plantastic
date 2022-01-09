@@ -8,17 +8,17 @@ Plantastic is an online store that allows the users to purchase specific plants 
 
 This project is my fourth assignment of the Full stack development course I am following at CodeInstitute.
 
-[View the live project here.](https://plantastic.herokuapp.com/)
+[View the live project here.](https://plantastic-lon.herokuapp.com/)
 
 ---
 
 ## Index 
 
 - <a href="#ux">1. User experience (UX)</a>
-  - <a href="#ux-stories">1.2 User stories</a>
-  - <a href="#ux-design">1.3 Design</a>
-  - <a href="#ux-architecture">1.4 Information architecture</a>
-  - <a href="#ux-mockup">1.5 Mockup designs</a>
+  - <a href="#ux-stories">1.1 User stories</a>
+  - <a href="#ux-design">1.2 Design</a>
+  - <a href="#ux-architecture">1.3 Information architecture</a>
+  - <a href="#ux-mockup">1.4 Mockup designs</a>
 - <a href="#features">2. Features</a>
   - <a href="#features-existing">2.1 Existing features</a>
   - <a href="#features-future">2.2 Features left to implement in the future</a>
@@ -56,9 +56,11 @@ Shopper | View basket items | See total cost/all items I'll receive
 Shopper | Adjust qty of items in my bag | Easily make changes to bag before checkout 
 Shopper | Easily enter payment info | Checkout quickly 
 Shopper | View an order confirmation after checkout | Ensure no mistakes made 
+Shopper | Sign up for a newsletter | Get updates of new products and info
 Store Owner | Add a product | Add new items to store 
 Store Owner | Edit/update a product | Change product details
 Store Owner | Delete a product | Remove items not for sale 
+Store Owner | Send Newsletter | Keep customers up to date of new products or info  
 
 <span id="ux-design"></span>
 
@@ -252,6 +254,8 @@ Click on **Open app** in the right corner of your Heroku account. The app wil op
 <span id="Acknowledge"></span>
 
 <h1>7. Acknowledge</h1>
+
+https://github.com/KenBroTech/Django-Newsletter-Project/blob/master/newsletter/settings.py
 
 A lot of thanks to the following:
 
