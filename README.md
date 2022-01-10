@@ -448,13 +448,12 @@ A lot of thanks to the following:
 
 - The support and guidance of my mentor Precious Ijege. 
 - The lessons and knowledge of [Code Institute.](https://codeinstitute.net/)
-- The mental support of my friends and family.
 
 <span id="Disclaimer"></span>
 
 <h1>8. Disclaimer</h1>
 This project is for educational purposes only. If there is an issue with the copyright or the content, please contact me: lonneke1908@gmail.com
 
-Thanks for visiting
+Thanks for visiting! 
 
 <a href="#plantastic">Back to top!</a>
